@@ -3610,13 +3610,14 @@ const emptyRows =
 
                     <StyledTableCell className="py-4 px-6 text-sm text-gray-500">{customer.Email}</StyledTableCell>
                     <StyledTableCell className="py-4 px-6 text-sm text-gray-500">{customer.PhoneNumber}</StyledTableCell>
-                    <StyledTableCell className="py-4 px-6 text-sm text-gray-500">
+                    {/* <StyledTableCell className="py-4 px-6 text-sm text-gray-500">
                       {customer.Address.AddressLine1}
                       {customer.Address.AddressLine2 && `, ${customer.Address.AddressLine2}`}
                       <br />
                       {customer.Address.CityID}, {customer.Address.StateID}, {customer.Address.ZipCode}
-                    </StyledTableCell>
-
+                    </StyledTableCell> */}
+                  
+                    <StyledTableCell>{customer.Addresses}</StyledTableCell>
                     {/* <StyledTableCell>{person.gender}</StyledTableCell> */}
                     <StyledTableCell>
                       <span

@@ -36,24 +36,24 @@ const GlobalProvider = ({ children }) => {
   
 
 
-
   useEffect(() => {
-    // Fetch data from API
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://imlystudios-backend.onrender.com/api/orders/getAllOrders"
+          "https://imlystudios-backend-mqg4.onrender.com/api/orders/getAllOrders?page=1&limit=10&searchText=Regular"
         );
         const result = await response.json();
-        setProducts(result.orders || []);
+        console.log('Fetched result:', result);
+        // Use result.data instead of result.orders
+        setProducts(result.data || []);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
+  
     fetchData();
   }, []);
-
+  
 
   return (
     <GlobalContext.Provider value={{ customers,products, loading, error }}>

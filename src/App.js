@@ -172,6 +172,7 @@ import Customerform from './components/Customer/Customerform';
 import { UserProvider } from './Context/userContext';
 import {StoreProvider} from './Context/storeContext';
 import {CustomerProvider} from './Context/customerContext';
+import EditOrder from './components/Orders/Editorder';
 
 function App() {
   const location = useLocation();
@@ -205,6 +206,8 @@ function App() {
           <Route path="/Userform" element={<Userform/>} />
           <Route path="/Storeform" element={<Storeform/>} />
           <Route path="/Customerform" element={<Customerform/>} />
+          <Route path="/edit-order" element={<EditOrder />} />
+
         </Routes>
         </CustomerProvider>
         </StoreProvider>
